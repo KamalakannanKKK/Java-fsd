@@ -1,4 +1,7 @@
-package constructor;
+package Project4;
+
+
+
 class A{
 	int i;
     String a;
@@ -10,14 +13,13 @@ class A{
     }
 }
 
-public class Construct {
-
+public class Constructor {
 	public static void main(String[] args) {
-	        A obj=new A(1,"kamal");
-	        obj.test();
-	        A obje=new A(5, "raj");
-	        obje.test();
+        A obj=new A(1,"kamal");
+        obj.test();
+        A obje=new A(5, "raj");
+        obje.test();
 
-	}
+}
 
 }

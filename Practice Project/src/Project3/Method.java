@@ -1,4 +1,7 @@
-package method;
+package Project3;
+
+
+
 class A{
 	static int add(int a,int b) {
 		int c=a+b;
@@ -12,8 +15,8 @@ class A{
 	}
 	 
 }
-public class Methodc {
 
+public class Method {
 	public static void main(String[] args) {
 		A obj=new A();
 		int h=A.add(53,65);
@@ -23,3 +26,6 @@ public class Methodc {
 	}
 
 }
+
+
+

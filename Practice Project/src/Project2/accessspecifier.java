@@ -1,5 +1,6 @@
- import Protectedaccess.*;
- import publicaccess.*;
+package Project2;
+import Protectedaccess.*;
+import publicaccess.*;
 //Private class
 class A{
 		private static void test() {
@@ -11,8 +12,8 @@ class B{
 		 System.out.println("Default class");
 	}
 }
-public class AccessSpecifier extends protectedc{
-	
+
+public class accessspecifier  extends protectedc{
 
 	public static void main(String[] args) {
 		
@@ -25,10 +26,6 @@ public class AccessSpecifier extends protectedc{
          //protected class
          publicc obje=new publicc();
          publicc.test();
-      
-         
-         
-	}
+	} 
 
 }
-
