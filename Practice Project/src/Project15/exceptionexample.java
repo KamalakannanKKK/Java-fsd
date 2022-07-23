@@ -12,9 +12,9 @@ public class exceptionexample {
 			try {
 				throw new MyException("Exception");
 			}
-			catch (MyException ex) {
+			catch (MyException e) {
 				System.out.println("Caught");
-				System.out.println(ex.getMessage());
+				System.out.println(e.getMessage());
 			}
 		}
 	}
