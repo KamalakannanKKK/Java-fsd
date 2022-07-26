@@ -6,7 +6,7 @@ public class longestincreasingsubsequence {
 		Node next;
 	}
 	static Node head;
-	static void countIncreasingElements(Node head)
+	static void countIE(Node head)
 	{
 		int cl = 1, max = 1;
 		int total_count = 1, I = 0;
@@ -83,6 +83,6 @@ public class longestincreasingsubsequence {
 		push(head, 15);
 		System.out.println("Linked list:");
 		printList(head);
-		countIncreasingElements(head);
+		countIE(head);
 	}
 	}
