@@ -38,15 +38,15 @@ public class longestincreasingsubsequence {
 		System.out.println(max);
 		int i = 0;
 		System.out.println("Increasing linked list");
-		for (Node curr = head; curr != null;
-							curr = curr.next)
+		for (Node c = head; c != null;
+							c = c.next)
 		{
 			if (i ==I)
 			{
 				while (max > 0)
 				{
-					System.out.print(curr.data + " ");
-					curr = curr.next;
+					System.out.print(c.data + " ");
+					c = c.next;
 					max--;
 				}
 				break;
