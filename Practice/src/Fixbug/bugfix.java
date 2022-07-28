@@ -93,8 +93,8 @@ private static void searchExpenses(ArrayList<Integer> arrayList) {
     Scanner sc=new Scanner(System.in);
     Object k=sc.nextInt();
 	boolean flag=arrayList.contains(k);
-	if(flag==true)System.out.println("Element is found");
-	else System.out.println("Element is not found");
+	if(flag==true)System.out.println("Expense is found");
+	else System.out.println("Expense is not found");
 }
 private static void sortExpenses(ArrayList<Integer> arrayList) {
     int arrlength =  arrayList.size();
