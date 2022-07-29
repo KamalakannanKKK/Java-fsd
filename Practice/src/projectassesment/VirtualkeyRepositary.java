@@ -85,12 +85,11 @@ public class VirtualkeyRepositary {
 					String search = sc.next();
 					boolean flag1 = false;
 					File arr1[] = folder.listFiles();
+					System.out.println("File :\n");
 					for (int i = 0; i < arr1.length; i++) {
 						if (arr1[i].getName().startsWith(search)) {
 							flag1 = true;
-							System.out.println("File Found\n");
 							System.out.println(arr1[i]);
-							break;
 						}
 					}
 					if (flag1 == false) {
