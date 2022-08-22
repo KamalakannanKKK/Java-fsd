@@ -1,23 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" import="java.util.Date"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>JSP Sessions</title>
 </head>
 <body>
-	<form action="index.jsp">
-		<input type="text" name="uname"> <input type="submit">
-
-	</form>
-	<%
-		String uname = request.getParameter("uname");
-		Date createTime = new Date(session.getCreationTime());
-		if (uname != null)
-			session.setAttribute("username", uname);
-		session.setAttribute("date", createTime);
-	%>
-	<a href="display.jsp">display</a>
+<%
+  if (request.getParameter("error") != null)
+          out.println("<b>Your session has expired or is invalid.</b><br>");
+%>
+<form action="login.jsp" metho="post">
+  Name <input name="name" id="name" maxlength=40><br>
+  Password <input type="password" name="pwd" id="pwd" maxlength="10"><br>
+  <button>Submit</button>
+  
+</form>
 </body>
 </html>

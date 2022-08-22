@@ -21,7 +21,7 @@ public class ProductCalling extends HttpServlet {
 
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int productid=Integer.parseInt(request.getParameter("txtrollno"));
+		int productid=Integer.parseInt(request.getParameter("txtID"));
 		try {
 			//Call Connection Method
 				Connection con=DatabaseConnection.getMyConnection();

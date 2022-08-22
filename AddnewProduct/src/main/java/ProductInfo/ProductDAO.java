@@ -36,12 +36,10 @@ public class ProductDAO extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// reading form values
 		try {
 			int price = Integer.parseInt(request.getParameter("txtprice"));
 			String name = request.getParameter("txtName");
 			String features = request.getParameter("txtfeatures");
-			// put values in Object
 			Product stud = new Product();
 			stud.setPrice(price);
 			stud.setName(name);
