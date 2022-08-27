@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+input[type=text], input[type=email],textarea {
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+input[type=submit] {
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+<div class="container">
+  <form method="post" action="/loginadd">
+<label for="firstname"> Name</label>
+    <input type="text" id="name" name="name" placeholder="Your first name" required>
+<br>
+    <label for="lastname">Password</label>
+    <input type="text" id="Password" name="Password" placeholder="Your last name" required>
+<br>
+<label for="email">Email Id</label>
+    <input type="email" id="emailid" name="emailid" placeholder="Your Email Address" required>
+<br>
+
+    <input type="submit" value="Submit">
+
+  </form>
+ 
+  </div>
+</body>
+</html>
