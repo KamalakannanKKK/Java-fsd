@@ -2,10 +2,10 @@
 <body>
 	<h2>Spring Application</h2>
 
-	<h2 class="hello-title">Hello ${name}!</h2>
+	<h2 class="hello-title">Home Page</h2>
 
 
-	<a href="login">Login Page</a>
-	<a href="user">User Page</a>
+	<a href="login">Go to Login Page</a>
+
 </body>
 </html>
