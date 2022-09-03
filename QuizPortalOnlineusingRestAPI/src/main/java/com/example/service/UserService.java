@@ -33,8 +33,7 @@ public class UserService {
 	@Autowired
 	TestRepository tr;
 	@Autowired
-//	Resultrepo resrepo;
-//	@Autowired
+
 	QuizUser u;
 	@Autowired
 	Test t;

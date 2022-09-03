@@ -14,6 +14,4 @@ public interface QuizRepository extends JpaRepository<QuizEntity, Integer>{
 	@Query("select q.title,count(distinct q.quizno) from QuizEntity as q group by q.quizno")
 	public List<Object> listOfQuiz();
 	
-//	@Query("select q.title,count(distinct q.quiz from Quiz as q group by q.quizno")
-//	public List<Object> viewAllQuiz();
 }

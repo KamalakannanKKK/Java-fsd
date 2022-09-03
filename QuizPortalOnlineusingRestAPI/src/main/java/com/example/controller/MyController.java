@@ -1,4 +1,5 @@
 package com.example.controller;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -45,31 +46,30 @@ public class MyController {
 	private JwtUtils jwtUtils;
 	@Autowired
 	AdminService as;
-	
-	//http://localhost:8080/mcq/userLogin
-	@PostMapping(value="userLogin", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String userLogin(@RequestBody QuizUser u)
-	{
-			return us.userLogin(u.getEmailid(), u.getPassword());
+
+	// user login
+	@PostMapping(value = "userLogin", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String userLogin(@RequestBody QuizUser u) {
+		return us.userLogin(u.getEmailid(), u.getPassword());
 	}
-	
-	//http://localhost:8080/mcq/userRegister
-	@PostMapping(value="userRegister", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String userRegiter(@RequestBody QuizUser u)
-	{
+
+	// user register
+	@PostMapping(value = "userRegister", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String userRegiter(@RequestBody QuizUser u) {
 		return us.userRegister(u);
 	}
-	
-	//http://localhost:8080/mcq/adminLogin
-	@PostMapping(value="adminLogin", consumes = MediaType.APPLICATION_JSON_VALUE)
+
+	// admin login
+	@PostMapping(value = "adminLogin", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<APIResponse> login(@RequestBody LoginRequestDTO loginRequestDTO) {
 
 		APIResponse apiResponse = loginService.login(loginRequestDTO);
 
 		return ResponseEntity.status(apiResponse.getStatus()).body(apiResponse);
 	}
-	//adminSignup
-	@PostMapping(value="signup", consumes = MediaType.APPLICATION_JSON_VALUE)
+
+	// adminSignup
+	@PostMapping(value = "signup", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<APIResponse> signUp(@RequestBody SignUpRequestDTO signUpRequestDTO) {
 
 		APIResponse apiResponse = loginService.signUp(signUpRequestDTO);
@@ -77,8 +77,8 @@ public class MyController {
 		return ResponseEntity.status(apiResponse.getStatus()).body(apiResponse);
 	}
 
-	//http://localhost:8080/mcq/adminupdate
-	@PutMapping(value="changepassword/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	// admin change password
+	@PutMapping(value = "changepassword/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Adminuser> updateTutorial(@PathVariable("id") long id, @RequestBody Adminuser newtutorial) {
 
 		// Serach for record in table
@@ -92,7 +92,8 @@ public class MyController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
-	
+
+	// Token authentication
 	@GetMapping("/authenttoken")
 	public ResponseEntity<APIResponse> privateApi(@RequestHeader(value = "authorization") String auth)
 			throws Exception {
@@ -103,71 +104,59 @@ public class MyController {
 		apiResponse.setData("Authentication done with token and Admin Can Do Modification");
 		return ResponseEntity.status(apiResponse.getStatus()).body(apiResponse);
 	}
-	
-	
-	//http://localhost:8080/mcq/addQuestions
-	@PostMapping(value="addQuestions", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String addQuestion(@RequestBody Question q)
-	{
-			return as.addQuestion(q);
-	}
-	
-	//http://localhost:8080/mcq/addQuiz
-	@PostMapping(value="addQuiz", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String addQuiz(@RequestBody QuizEntity q)
-	{
-			return as.addQuiz(q);
-	}
-	
-	//http://localhost:8080/mcq/viewAllQuiz
-		@GetMapping(value="viewAllQuiz", produces= MediaType.APPLICATION_JSON_VALUE)
-		public List<QuizEntity> viewAllQuiz()
-		{
-				return as.viewAllQuiz();
-		}
-		
-		//http://localhost:8080/mcq/quizinfo
-		@GetMapping(value="quizinfo", produces= MediaType.APPLICATION_JSON_VALUE)
-		public Report quizinfo()
-		{
-				return as.quizInfo();
-		}
-		
-		//http://localhost:8080/mcq/viewQuiz
-				@GetMapping(value="viewQuiz", produces= MediaType.APPLICATION_JSON_VALUE)
-				public List<Object> viewQuiz()
-				{
-						return us.viewAllQuiz();
-				}
 
+	// Add Questions
+	@PostMapping(value = "addQuestions", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String addQuestion(@RequestBody Question q) {
+		return as.addQuestion(q);
+	}
 
-				//http://localhost:8080/mcq/takeTest
-				@PostMapping(value="takeTest", consumes = MediaType.APPLICATION_JSON_VALUE)
-				public String takeTest(@RequestBody Test t)
-				{
-						return us.takeTest(t);
-				}
-				
-				//http://localhost:8080/mcq/getAllTest
-				@GetMapping(value="getAllTest", produces= MediaType.APPLICATION_JSON_VALUE)
-				public List<Test> getAllTest()
-				{
-						return us.getTestList();
-				}
-				
-				//http://localhost:8080/mcq/getresult
-				@GetMapping(value="getresult", produces= MediaType.APPLICATION_JSON_VALUE)
-				public List<Result> getresult()
-				{
-						return us.result();
-				}
-				
-				//http://localhost:8080/mcq/getAdminResult
-				@GetMapping(value="getAdminResult", produces= MediaType.APPLICATION_JSON_VALUE)
-				public List<Result> getAdminResult()
-				{
-						return us.result();
-				}
-				
+	// Add Quiz
+	@PostMapping(value = "addQuiz", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String addQuiz(@RequestBody QuizEntity q) {
+		return as.addQuiz(q);
+	}
+
+	// View All Quiz
+	@GetMapping(value = "viewAllQuiz", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<QuizEntity> viewAllQuiz() {
+		return as.viewAllQuiz();
+	}
+
+	// Quiz info
+	@GetMapping(value = "quizinfo", produces = MediaType.APPLICATION_JSON_VALUE)
+	public Report quizinfo() {
+		return as.quizInfo();
+	}
+
+	// View Quiz
+	@GetMapping(value = "viewQuiz", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Object> viewQuiz() {
+		return us.viewAllQuiz();
+	}
+
+	// Take Test
+	@PostMapping(value = "takeTest", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String takeTest(@RequestBody Test t) {
+		return us.takeTest(t);
+	}
+
+	// Get All Test
+	@GetMapping(value = "getAllTest", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Test> getAllTest() {
+		return us.getTestList();
+	}
+
+	//Get result
+	@GetMapping(value = "getresult", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Result> getresult() {
+		return us.result();
+	}
+
+	//Get Admin Result
+	@GetMapping(value = "getAdminResult", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Result> getAdminResult() {
+		return us.result();
+	}
+
 }
-

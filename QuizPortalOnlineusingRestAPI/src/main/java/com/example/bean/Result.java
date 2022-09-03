@@ -2,7 +2,6 @@ package com.example.bean;
 
 public class Result implements Comparable<Result>{
 
-	//private int resid;
 	private String email;
 	private Integer marks;
 	public Result()
@@ -13,12 +12,7 @@ public class Result implements Comparable<Result>{
 		// TODO Auto-generated constructor stub]
 		this.email=email;this.marks=mark;
 	}
-//	public int getResid() {
-//		return resid;
-//	}
-//	public void setResid(int resid) {
-//		this.resid = resid;
-//	}
+
 	public String getEmail() {
 		return email;
 	}
