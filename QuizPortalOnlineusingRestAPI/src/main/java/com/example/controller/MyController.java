@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bean.Adminuser;
@@ -24,6 +26,7 @@ import com.example.bean.Report;
 import com.example.bean.Result;
 import com.example.bean.Test;
 import com.example.repository.AdminRepository;
+import com.example.repository.QuestionRepository;
 import com.example.adminlogin.APIResponse;
 import com.example.adminlogin.LoginRequestDTO;
 import com.example.adminlogin.LoginService;
@@ -37,8 +40,11 @@ import com.example.service.UserService;
 public class MyController {
 	@Autowired
 	UserService us;
+
 	@Autowired
 	private AdminRepository userRepository;
+	@Autowired
+	private QuestionRepository j;
 	@Autowired
 	private LoginService loginService;
 
@@ -147,16 +153,79 @@ public class MyController {
 		return us.getTestList();
 	}
 
-	//Get result
+	// Get result
 	@GetMapping(value = "getresult", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Result> getresult() {
 		return us.result();
 	}
 
-	//Get Admin Result
+	// Get Admin Result
 	@GetMapping(value = "getAdminResult", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Result> getAdminResult() {
 		return us.result();
+	}
+
+	// View Answer for the question by using question id
+	@GetMapping("/answercheck/{id}")
+	public ResponseEntity<String> getTutorialById(@PathVariable("id") long id) {
+		// Optional is predefined class to check output is present or no
+		Optional<Question> t = j.findById((int) id);
+		if (t.isPresent()) {
+			int ans = t.get().getAns();
+			return new ResponseEntity<String>("Correct anwser is option " + ans, HttpStatus.OK);
+		}
+
+		else {
+
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+
+	}
+
+	@GetMapping("/question/{id}")
+	public ResponseEntity<String> getquestionById(@PathVariable("id") long id) {
+		// Optional is predefined class to check output is present or no
+		Optional<Question> t = j.findById((int) id);
+		if (t.isPresent()) {
+			String quest;
+			String opt1;
+			String opt2;
+			String opt3;
+			String opt4;
+			quest = t.get().getQuest();
+			opt1 = t.get().getOpt1();
+			opt2 = t.get().getOpt2();
+			opt3 = t.get().getOpt3();
+			opt4 = t.get().getOpt4();
+			return new ResponseEntity<String>(
+					"Question:" + quest + "Options are  1." + opt1 + "   2." + opt2 + "    3." + opt3 + "   4." + opt4,
+					HttpStatus.OK);
+		}
+
+		else {
+
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+
+	}
+
+	// View Question with answer
+	@GetMapping("/allquestion")
+
+	public ResponseEntity<List<Question>> getAllQuestions(@RequestParam(required = false) String title) {
+		try {
+			List<Question> tutorials = new ArrayList<Question>();
+			if (title == null) {
+				j.findAll().forEach(tutorials::add);
+			}
+
+			if (tutorials.isEmpty())
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			else
+				return new ResponseEntity<>(tutorials, HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 	}
 
 }
