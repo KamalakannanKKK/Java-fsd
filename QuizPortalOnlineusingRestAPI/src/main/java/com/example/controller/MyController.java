@@ -181,7 +181,7 @@ public class MyController {
 		}
 
 	}
-
+// view question without answer for user
 	@GetMapping("/question/{id}")
 	public ResponseEntity<String> getquestionById(@PathVariable("id") long id) {
 		// Optional is predefined class to check output is present or no
@@ -209,7 +209,7 @@ public class MyController {
 
 	}
 
-	// View Question with answer
+	// View Question with answer for admin
 	@GetMapping("/allquestion")
 
 	public ResponseEntity<List<Question>> getAllQuestions(@RequestParam(required = false) String title) {
