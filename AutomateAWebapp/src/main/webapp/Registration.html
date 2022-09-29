@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register here</title>
+<style type="text/css">
+
+
+form {
+  border: 3px solid #f1f1f1;
+  /*Make the form in center place, using max-width:500px and margin:auto; */
+  max-width: 700px;
+  margin: auto;
+ 
+ }
+ 
+ .container {
+  padding: 1px;
+
+  background-color: #f1f1f1;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: light;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+ 
+ .registerbtn{
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<form action = "Login.html">
+ 
+ <div class = "container">
+ 
+ <fieldset>
+ <h1>Registration Form </h1>
+ <h3> Please fill in this form to create an account: </h3><br>
+ <label for ="email"><b>Email:</b></label>
+ <input type ="text" placeholder = "Enter Email" name="email" id="email" required><br><br>
+ 
+ <label for ="psw"><b>Password:</b></label>
+ <input type ="password" placeholder = "Enter Password" name="psw" id="psw" required><br><br>
+ 
+ <label for ="psw-repeat"><b>Repeat Password:</b></label>
+ <input type ="password" placeholder = "Repeat Password" name="psw-repeat" id="psw-repeat" required><br><br>
+ 
+ <label for="role"><b>Select Role</b></label>
+ <input type="radio" name="radio" id="admin" required> Admin
+ <input type="radio" name="radio" id="user" required> User
+ <input type="radio" name="radio" id="vendor" required> Vendor <br> <br> 
+ 
+ <label for="skill"><b>Select Skill:</b></label>
+ <input type="checkbox" name ="skill" id="skill1" required> Java 
+ <input type="checkbox" name ="skill" id="skill2" required> MySql 
+ <input type="checkbox" name ="skill" id="skill3" required> Selenium Webdriver<br><br>
+ 
+ <button type="submit" class="registerbtn">Register</button>
+ 
+ </fieldset>
+ </div>
+
+
+</form>
+
+</body>
+</html>

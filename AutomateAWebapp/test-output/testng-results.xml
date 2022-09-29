@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="42722" started-at="2022-09-28T17:34:27 IST" finished-at="2022-09-28T17:35:09 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="42722" started-at="2022-09-28T17:34:27 IST" finished-at="2022-09-28T17:35:09 IST">
+      <class name="RegistrationForm.RegistrationFormTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="setUp" is-config="true" duration-ms="13332" started-at="2022-09-28T17:34:27 IST" finished-at="2022-09-28T17:34:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="atestEmail()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="atestEmail" duration-ms="2521" started-at="2022-09-28T17:34:40 IST" finished-at="2022-09-28T17:34:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- atestEmail -->
+        <test-method status="PASS" signature="btestPassword()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="btestPassword" duration-ms="2676" started-at="2022-09-28T17:34:43 IST" finished-at="2022-09-28T17:34:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- btestPassword -->
+        <test-method status="PASS" signature="ctestRepeatPassword()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="ctestRepeatPassword" duration-ms="2621" started-at="2022-09-28T17:34:45 IST" finished-at="2022-09-28T17:34:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ctestRepeatPassword -->
+        <test-method status="PASS" signature="dtestToVerifyRadioButtonExist()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="dtestToVerifyRadioButtonExist" duration-ms="2743" started-at="2022-09-28T17:34:48 IST" finished-at="2022-09-28T17:34:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dtestToVerifyRadioButtonExist -->
+        <test-method status="PASS" signature="etestToVerifyRadioButtonOneSelected()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="etestToVerifyRadioButtonOneSelected" duration-ms="2667" started-at="2022-09-28T17:34:51 IST" finished-at="2022-09-28T17:34:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- etestToVerifyRadioButtonOneSelected -->
+        <test-method status="PASS" signature="ftestToVerifyRadioButtonTwoSelected()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="ftestToVerifyRadioButtonTwoSelected" duration-ms="2604" started-at="2022-09-28T17:34:53 IST" finished-at="2022-09-28T17:34:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ftestToVerifyRadioButtonTwoSelected -->
+        <test-method status="PASS" signature="gtestToVerifyRadioButtonSelected()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="gtestToVerifyRadioButtonSelected" duration-ms="2552" started-at="2022-09-28T17:34:56 IST" finished-at="2022-09-28T17:34:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gtestToVerifyRadioButtonSelected -->
+        <test-method status="PASS" signature="htestToVerifyCheckBoxOneSelected()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="htestToVerifyCheckBoxOneSelected" duration-ms="2559" started-at="2022-09-28T17:34:59 IST" finished-at="2022-09-28T17:35:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htestToVerifyCheckBoxOneSelected -->
+        <test-method status="PASS" signature="htestToVerifyCheckboxExist()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="htestToVerifyCheckboxExist" duration-ms="695" started-at="2022-09-28T17:35:01 IST" finished-at="2022-09-28T17:35:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htestToVerifyCheckboxExist -->
+        <test-method status="PASS" signature="itestToVerifyCheckBoxTwoSelected()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="itestToVerifyCheckBoxTwoSelected" duration-ms="2537" started-at="2022-09-28T17:35:02 IST" finished-at="2022-09-28T17:35:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- itestToVerifyCheckBoxTwoSelected -->
+        <test-method status="PASS" signature="jtestToVerifyCheckBoxThreeSelected()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="jtestToVerifyCheckBoxThreeSelected" duration-ms="2560" started-at="2022-09-28T17:35:04 IST" finished-at="2022-09-28T17:35:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jtestToVerifyCheckBoxThreeSelected -->
+        <test-method status="PASS" signature="testToVerifyRegistrationButton()[pri:0, instance:RegistrationForm.RegistrationFormTest@9a3d1d]" name="testToVerifyRegistrationButton" duration-ms="2495" started-at="2022-09-28T17:35:07 IST" finished-at="2022-09-28T17:35:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testToVerifyRegistrationButton -->
+      </class> <!-- RegistrationForm.RegistrationFormTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
