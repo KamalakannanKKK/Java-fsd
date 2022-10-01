@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+<listeners>
+  <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+   <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners>
+  <test name="Test">
+   <parameter name="val1" value="2" />
+  <parameter name="val2" value="3" />
+    <classes>
+      <class name="TestngExample.TestAnnotationParameter"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
