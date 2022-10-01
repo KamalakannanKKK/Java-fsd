@@ -36,10 +36,7 @@ public class LoginTest {
 	TakesScreenshot p = (TakesScreenshot) driver;	
 	File f = p.getScreenshotAs(OutputType.FILE);
 	FileHandler.copy(f,new File("L-signin.png"));
-	//driver.findElement(By.name("commit")).click();
 	
-//	driver.findElement(By.id("user_submit")).click();
-		
 	
 }
 @BeforeTest

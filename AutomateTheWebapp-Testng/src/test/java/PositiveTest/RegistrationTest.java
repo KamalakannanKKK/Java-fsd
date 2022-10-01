@@ -43,10 +43,7 @@ public class RegistrationTest {
 	TakesScreenshot p = (TakesScreenshot) driver;	
 	File f = p.getScreenshotAs(OutputType.FILE);
 	FileHandler.copy(f,new File("R-signup.png"));
-	//driver.findElement(By.name("commit")).click();
 	
-//	driver.findElement(By.id("user_submit")).click();
-		
 	
 }
 @BeforeTest
