@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="105925" started-at="2022-10-11T20:20:57 IST" finished-at="2022-10-11T20:22:43 IST">
+    <groups>
+      <group name="Internet Explorer">
+        <method signature="Automation.LaunchIE()[pri:1, instance:ecommerce.Automation@150efb8]" name="LaunchIE" class="ecommerce.Automation"/>
+        <method signature="Automation.IE()[pri:2, instance:ecommerce.Automation@150efb8]" name="IE" class="ecommerce.Automation"/>
+      </group> <!-- Internet Explorer -->
+      <group name="Chrome">
+        <method signature="Automation.LaunchChrome()[pri:3, instance:ecommerce.Automation@150efb8]" name="LaunchChrome" class="ecommerce.Automation"/>
+        <method signature="Automation.f()[pri:4, instance:ecommerce.Automation@150efb8]" name="f" class="ecommerce.Automation"/>
+      </group> <!-- Chrome -->
+    </groups>
+    <test name="Default test" duration-ms="105925" started-at="2022-10-11T20:20:57 IST" finished-at="2022-10-11T20:22:43 IST">
+      <class name="ecommerce.Automation">
+        <test-method status="PASS" signature="LaunchIE()[pri:1, instance:ecommerce.Automation@150efb8]" name="LaunchIE" duration-ms="4033" started-at="2022-10-11T20:20:57 IST" finished-at="2022-10-11T20:21:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchIE -->
+        <test-method status="PASS" signature="IE()[pri:2, instance:ecommerce.Automation@150efb8]" name="IE" duration-ms="42014" started-at="2022-10-11T20:21:01 IST" depends-on-methods="ecommerce.Automation.LaunchIE" finished-at="2022-10-11T20:21:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IE -->
+        <test-method status="PASS" signature="LaunchChrome()[pri:3, instance:ecommerce.Automation@150efb8]" name="LaunchChrome" duration-ms="2006" started-at="2022-10-11T20:21:43 IST" finished-at="2022-10-11T20:21:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchChrome -->
+        <test-method status="PASS" signature="f()[pri:4, instance:ecommerce.Automation@150efb8]" name="f" duration-ms="57662" started-at="2022-10-11T20:21:45 IST" depends-on-methods="ecommerce.Automation.LaunchChrome" finished-at="2022-10-11T20:22:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- ecommerce.Automation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
