@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="22691" started-at="2022-10-13T19:07:46 IST" finished-at="2022-10-13T19:08:09 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="22691" started-at="2022-10-13T19:07:46 IST" finished-at="2022-10-13T19:08:09 IST">
+      <class name="Test.Login">
+        <test-method status="PASS" signature="delete()[pri:0, instance:Test.Login@1374a5e]" name="delete" duration-ms="22558" started-at="2022-10-13T19:07:46 IST" finished-at="2022-10-13T19:08:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete -->
+      </class> <!-- Test.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
